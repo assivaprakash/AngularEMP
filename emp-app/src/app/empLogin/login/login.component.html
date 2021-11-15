@@ -1,0 +1,27 @@
+<div>Login!</div>
+<div class="container">
+    <form [formGroup]="loginForm">
+        <div class="row">
+            <div class="roe col-sm-6">              
+                <div class="form-group">
+                    &nbsp;<label for="email" style="font-size: 15px;" >Email </label>
+                    
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="email" name="email" formControlName="email" class="form-control" autocomplete="off">
+                  
+                </div>
+                <br>
+                <div class="form-group">
+                    &nbsp;<label for="password" style="font-size: 15px;" > Password </label>
+                    <input type="password" id="password" name="password" formControlName="password" class="form-control" autocomplete="off">
+                   
+                </div> <br>
+                <div class="form-group" style="padding-left: 190px;">
+                    <button (click)="onLogin()" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>
+
+                </div>
+                <div>
+                <a class="nav-link" routerLink="/registerform">New User Registration</a></div>
+            </div>
+            </div>      
+    </form>
+</div>

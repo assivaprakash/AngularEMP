@@ -1,0 +1,25 @@
+<p>Register!</p>
+<div class="container">
+    <form [formGroup]="registerForm">
+        <div class="row">
+            <div class="roe col-sm-6">               
+                <div class="form-group">
+                    &nbsp;<label for="email" style="font-size: 15px;" >Email </label>
+                    
+                    &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="email" name="email" formControlName="email" class="form-control" autocomplete="off">
+                   
+                 </div>
+                 <br>
+                 <div class="form-group">
+                    &nbsp;<label for="password" style="font-size: 15px;" > Password </label>
+                     <input type="password" id="password" name="password" formControlName="password" class="form-control" autocomplete="off">
+                    
+                 </div> <br>
+                 <div class="form-group" style="padding-left: 180px;">
+                    <button (click)="onRegister()" [disabled]="!registerForm.valid" class="btn btn-primary"> Register</button>
+
+                </div>
+            </div>
+            </div>      
+    </form>
+</div>

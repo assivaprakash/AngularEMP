@@ -1,0 +1,19 @@
+
+<div style="text-align:center;">
+  <ul class="nav">
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/emplist">Emplist</a>
+    </li>
+    <ng-template [ngIf]="!_auth.isAuthenticated()">
+    <li class="nav-item">
+     
+      <a class="nav-link" routerLink="/login">Login</a>
+    
+    </li>
+  </ng-template>
+  </ul>
+  <router-outlet></router-outlet>
+
+</div>
+
