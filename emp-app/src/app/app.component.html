@@ -1,17 +1,26 @@
 
 <div style="text-align:center;">
   <ul class="nav">
-
+   
+    <li class="nav-item">     
+      <a class="nav-link" routerLink="/login">Login</a>    
+    </li>
+    <li class="nav-item">     
+      <a class="nav-link" routerLink="/home">Home</a>    
+    </li>
+    <li class="nav-item">     
+      <a class="nav-link" routerLink="/about">About</a>    
+    </li>
+    <li class="nav-item">     
+      <a class="nav-link" routerLink="/contact">Contact</a>    
+    </li>
     <li class="nav-item">
       <a class="nav-link" routerLink="/emplist">Emplist</a>
     </li>
-    <ng-template [ngIf]="!_auth.isAuthenticated()">
     <li class="nav-item">
-     
-      <a class="nav-link" routerLink="/login">Login</a>
-    
+      <a class="nav-link" (click)="_auth.onLogOut()">LogOut</a>
     </li>
-  </ng-template>
+
   </ul>
   <router-outlet></router-outlet>
 

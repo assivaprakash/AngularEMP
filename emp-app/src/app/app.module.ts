@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AppsvcService } from './emp-dashboard/services/appsvc.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthserviceService } from './empLogin/authservice.service';
+import { AuthGuard } from './guards/auth.guard';
 //import { EmpDashboardModule } from './emp-dashboard/emp-dashboard.module';
 
 @NgModule({
@@ -24,7 +25,7 @@ import { AuthserviceService } from './empLogin/authservice.service';
     HttpClientModule
     //EmpDashboardModule
   ],
-  providers: [AppsvcService,AuthserviceService],
+  providers: [AppsvcService,AuthserviceService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

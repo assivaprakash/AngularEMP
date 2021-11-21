@@ -39,11 +39,13 @@ export class AuthserviceService {
        this.currentToken=token        
      }
    );
+   
    return this.currentToken;
  }
 
  isAuthenticated()
  {
+   
    return this.currentToken !=null?true:false;
  }
  onLogOut()
